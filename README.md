@@ -11,9 +11,9 @@ Spacebar Server/Jank Client stack to get set up quickly with docker.
 `docker compose up -d` will build the stacks. Some notes about differences from defaults.
 
 **Ports**
-- Spacebar usually uses port `3001`. In this compose, it is set to `110001`.
-- Jank usually uses port `8080`. Here is uses `110002`
-- Adminer usually uses port `8080`. Here is uses `110003`.
+- Spacebar usually uses port `3001`. In this compose, it is set to `11001`.
+- Jank usually uses port `8080`. Here is uses `11002`
+- Adminer usually uses port `8080`. Here is uses `11003`.
 
 
 ## TODO:

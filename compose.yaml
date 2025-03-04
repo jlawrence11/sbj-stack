@@ -1,4 +1,4 @@
-name: "sb"
+name: "sbj"
 
 services:
   jank:
@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile-jank
     restart: unless-stopped
     ports: 
-      - "10002:8080"
+      - "11002:8080"
 
   spacebar:
     image: spacebarchat/server:latest-postgressql
@@ -15,7 +15,7 @@ services:
     env_file:
       - path: ./.env
     ports:
-      - "3001:3001"
+      - "11001:3001"
     volumes:
       - ./sb:/exec/persistent/storage
     environment:
@@ -31,12 +31,11 @@ services:
     image: adminer
     restart: always
     ports:
-      - 10001:8080
+      - 11003:8080
     depends_on:
       db:
         condition: service_healthy
               
-
   db:
     image: postgres:15-alpine
     restart: unless-stopped
